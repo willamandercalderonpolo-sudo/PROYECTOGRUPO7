@@ -116,7 +116,7 @@ namespace PROYECTOFINAL_2025
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("\n⚡ REPRODUCIENDO ALARMA DE FALLO ELÉCTRICO...");
                 Console.ResetColor();
-                string ruta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "FALLOELECTRICO.wav");
+                string ruta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "alarma_fallo.wav");
                 if (!File.Exists(ruta))
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;

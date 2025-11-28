@@ -307,7 +307,7 @@ class Program
         Console.WriteLine("║ ✅ Sensores restaurados a valores normales           ║");
         Console.WriteLine("║ ✅ Sistema de respaldo desactivado                   ║");
         Console.WriteLine("║                                                       ║");
-        Console.WriteLine("║ 🔥 ¡GRACIAS POR USAR SCI v3.0 - GRUPO JJM SAC! 🔥   ║");
+        Console.WriteLine("║ 🔥 ¡GRACIAS POR USAR SCI v3.0 - GRUPO JJM SAC! 🔥    ║");
         Console.WriteLine("╚══════════════════════════════════════════════════════╝");
         Console.ResetColor();
         Console.WriteLine("\n📧 Contacto: grupo.jjm.sac@gmail.com");

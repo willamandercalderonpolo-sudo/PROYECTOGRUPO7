@@ -207,7 +207,7 @@ class Program
         Console.ResetColor();
     }
 
-    // TU FUNCIÓN ANTIGUA MANTENIDA (POR SI LA NECESITAS)
+    //funcion antigua 
     static void ActualizarManual()
     {
         Console.Clear();
@@ -306,8 +306,8 @@ class Program
         Console.WriteLine("║ ✅ Luces estroboscópicas apagadas                    ║");
         Console.WriteLine("║ ✅ Sensores restaurados a valores normales           ║");
         Console.WriteLine("║ ✅ Sistema de respaldo desactivado                   ║");
-        Console.WriteLine("║                                                       ║");
-        Console.WriteLine("║ 🔥 ¡GRACIAS POR USAR SCI v3.0 - GRUPO JJM SAC! 🔥    ║");
+        Console.WriteLine("║                                                      ║");
+        Console.WriteLine("║ 🔥 ¡GRACIAS POR USAR SCI v3.0 - GRUPO JJM SAC! 🔥   ║");
         Console.WriteLine("╚══════════════════════════════════════════════════════╝");
         Console.ResetColor();
         Console.WriteLine("\n📧 Contacto: grupo.jjm.sac@gmail.com");

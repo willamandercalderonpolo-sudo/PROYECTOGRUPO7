@@ -364,6 +364,7 @@ namespace PROYECTOFINAL_2025
             Thread.Sleep(4000);
         }
 
+        // 🔥 🔥 🔥 MÉTODO MODIFICADO - OPCIÓN 1 CON SALIDA 🔥 🔥 🔥
         public void MonitorearSistema()
         {
             Console.Clear();
@@ -412,6 +413,27 @@ namespace PROYECTOFINAL_2025
                     ActivarAlarma();
                 }
                 Thread.Sleep(3000);
+
+                // ✅ ✅ ✅ NUEVO: SALIDA CON 'Q' ✅ ✅ ✅
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("\n\n⌨️ Presione 'Q' para SALIR del monitoreo...");
+                Console.WriteLine("   (El monitoreo continúa automáticamente)");
+                Console.ResetColor();
+
+                if (Console.KeyAvailable)
+                {
+                    if (Console.ReadKey(true).Key == ConsoleKey.Q)
+                    {
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("✅ Monitoreo finalizado");
+                        Console.WriteLine("🔙 Volviendo al menú principal...");
+                        eventosLog.Add($"[{DateTime.Now:HH:mm:ss}] ✅ Monitoreo finalizado por usuario");
+                        Console.ResetColor();
+                        return; // ← SALIR DEL BUCLE Y VOLVER AL MENÚ
+                    }
+                }
+                // ✅ ✅ ✅ FIN DEL CAMBIO ✅ ✅ ✅
             }
         }
 
@@ -438,19 +460,19 @@ namespace PROYECTOFINAL_2025
             Console.WriteLine("🎮 SIMULACIÓN MANUAL INTERACTIVA");
             Console.WriteLine("═══════════════════════════════════════");
             Console.WriteLine("Presiona las teclas para activar:");
-            Console.WriteLine("  1️⃣  → Activar Luces Estroboscópicas");
-            Console.WriteLine("  2️⃣  → Activar Alarma de Incendio");
-            Console.WriteLine("  3️⃣  → Activar Alarma de Fallo Eléctrico");
-            Console.WriteLine("  4️⃣  → Activar Estación Manual");
-            Console.WriteLine("  5️⃣  → Desactivar Todo");
-            Console.WriteLine("  ESC → Salir de la Simulación");
+            Console.WriteLine(" 1️⃣ → Activar Luces Estroboscópicas");
+            Console.WriteLine(" 2️⃣ → Activar Alarma de Incendio");
+            Console.WriteLine(" 3️⃣ → Activar Alarma de Fallo Eléctrico");
+            Console.WriteLine(" 4️⃣ → Activar Estación Manual");
+            Console.WriteLine(" 5️⃣ → Desactivar Todo");
+            Console.WriteLine(" ESC → Salir de la Simulación");
             Console.WriteLine("═══════════════════════════════════════");
             Console.ResetColor();
 
             ConsoleKeyInfo tecla;
             do
             {
-                Console.Write("\n⌨️  Presiona una tecla: ");
+                Console.Write("\n⌨️ Presiona una tecla: ");
                 tecla = Console.ReadKey(true);
 
                 switch (tecla.Key)
@@ -521,10 +543,11 @@ namespace PROYECTOFINAL_2025
 
                     default:
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("\n⚠️  Tecla no válida. Usa 1-5 o ESC");
+                        Console.WriteLine("\n⚠️ Tecla no válida. Usa 1-5 o ESC");
                         Console.ResetColor();
                         Thread.Sleep(1000);
                         break;
+
                 }
 
                 Console.Clear();
@@ -532,12 +555,12 @@ namespace PROYECTOFINAL_2025
                 Console.WriteLine("🎮 SIMULACIÓN MANUAL INTERACTIVA");
                 Console.WriteLine("═══════════════════════════════════════");
                 Console.WriteLine("Presiona las teclas para activar:");
-                Console.WriteLine("  1️⃣  → Activar Luces Estroboscópicas");
-                Console.WriteLine("  2️⃣  → Activar Alarma de Incendio");
-                Console.WriteLine("  3️⃣  → Activar Alarma de Fallo Eléctrico");
-                Console.WriteLine("  4️⃣  → Activar Estación Manual");
-                Console.WriteLine("  5️⃣  → Desactivar Todo");
-                Console.WriteLine("  ESC → Salir de la Simulación");
+                Console.WriteLine(" 1️⃣ → Activar Luces Estroboscópicas");
+                Console.WriteLine(" 2️⃣ → Activar Alarma de Incendio");
+                Console.WriteLine(" 3️⃣ → Activar Alarma de Fallo Eléctrico");
+                Console.WriteLine(" 4️⃣ → Activar Estación Manual");
+                Console.WriteLine(" 5️⃣ → Desactivar Todo");
+                Console.WriteLine(" ESC → Salir de la Simulación");
                 Console.WriteLine("═══════════════════════════════════════");
                 Console.ResetColor();
             } while (tecla.Key != ConsoleKey.Escape);
